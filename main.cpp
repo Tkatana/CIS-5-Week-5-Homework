@@ -38,7 +38,7 @@ int main() {
   //I used && here because you need both a min of a 70 in score and 60 percent
   //  attendance to be considered passing not just one of the two
   
-   else if (score <= 70)
+   else if (score <= 69)
   {
     std:: cout << "Time to lock in! You're failing.\n";
   }
