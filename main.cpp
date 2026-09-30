@@ -1,24 +1,55 @@
+// Homework 5 — Tyler Quintana
+// CIS 5 Week 05 · Rule engine lite
+
 #include <iostream>
 
-// Homework 5 — Your Name
-// CIS 5 Week 05 · Rule engine lite
 
 int main() {
   int score = 0;
   int attendance = 0;
 
-  // TODO: cout question, then cin, for score and for attendance
+  std:: cout << "Score? ";
+  std::cin >> score;
+  std:: cout << "Attendance percentage? ";
+  std:: cin >> attendance;
 
-  // Edge values: (list just-below / exactly-on / just-above for each threshold here)
 
-  // TODO: invalid branch FIRST — out-of-range input gets its own message
-  //   if (score < 0 || score > 100) { ... }
+  // Edge values: 
+  // just under: score- 69 attendance- 59 
+  // exact: score- 70 attendance- 60 
+  // Just over: score- 71 attendance- 61
 
-  // TODO: else if ( ... && ... ) { ... }   best outcome
-  // TODO: else if ( ... ) { ... }          middle outcome
-  // TODO: else { ... }                     the rest
+  if (score < 0 || score > 100)
+  {
+  std:: cout << "INVALID SCORE\n";
+  }
+  
+  
+  // this invalid guard is here first to keep the rest 
+  // of the blocks from running in error
+  
+  else if (score >= 70 && attendance >= 60)
+  {
+    std:: cout << " You're passing! I'm proud of you :)\n";
+  }
+  //I used && here because you need both a min of a 70 in score and 60 percent
+  //  attendance to be considered passing not just one of the two
+  
+   else if (score <= 70)
+  {
+    std:: cout << "Time to lock in! You're failing.\n";
+  }
 
-  // TODO: two comments that explain a choice (why invalid first, why && not ||, why >= not >)
+  else if (score >= 70 || attendance <= 59)
+  {
+    std::cout << "WARNING: Your abscences are too high! \n";
+  }
+  
+  else 
+  {
+    std:: cout << "WARNING\n";
+  }
 
+  
   return 0;
 }
