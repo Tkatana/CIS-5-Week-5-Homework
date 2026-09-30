@@ -19,10 +19,13 @@ int main() {
   // exact: score- 70 attendance- 60 
   // Just over: score- 71 attendance- 61
 
+  
   if (score < 0 || score > 100)
   {
   std:: cout << "INVALID SCORE\n";
   }
+
+  
   
   
   // this invalid guard is here first to keep the rest 
@@ -40,14 +43,15 @@ int main() {
     std:: cout << "Time to lock in! You're failing.\n";
   }
 
-  else if (score >= 70 || attendance <= 59)
+
+  else if (attendance >= 0 || attendance <= 59)
   {
     std::cout << "WARNING: Your abscences are too high! \n";
   }
   
   else 
   {
-    std:: cout << "WARNING\n";
+    std:: cout << "INVALID \n";
   }
 
   
